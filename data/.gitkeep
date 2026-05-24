@@ -1,0 +1,3 @@
+# Thư mục này dùng để chứa file dữ liệu .xlsx
+# File dữ liệu không được đẩy lên GitHub (xem .gitignore)
+# Đặt file personalised_dataset.xlsx vào đây trước khi chạy
