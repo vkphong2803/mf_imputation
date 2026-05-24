@@ -39,7 +39,7 @@ mf_imputation/
 ### Bước 1 — Clone repo
 
 ```bash
-git clone https://github.com/<your-username>/mf_imputation.git
+git clone https://github.com/vkphong2803/mf_imputation.git
 cd mf_imputation
 ```
 
