@@ -1,24 +1,7 @@
-"""
-Matrix Factorization — Missing Data Imputation
-Entry point: python main.py [--input data/personalised_dataset.xlsx]
-
-Cấu trúc thư mục:
-  mf_imputation/
-  ├── data/               ← đặt file .xlsx vào đây
-  ├── output/             ← CSV + biểu đồ được lưu ở đây
-  ├── src/
-  │   ├── imputer.py
-  │   └── visualizer.py
-  ├── main.py             ← file này
-  ├── requirements.txt
-  └── README.md
-"""
-
 import argparse
 import sys
 from pathlib import Path
 
-# ── Đảm bảo import src kể cả khi chạy từ thư mục khác ──────────
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
 
@@ -27,14 +10,13 @@ from src.visualizer import plot_rmse
 
 
 # ────────────────────────────────────────────────────────────────
-# Default config — override bằng CLI args hoặc sửa trực tiếp
+# Default config 
 # ────────────────────────────────────────────────────────────────
 DEFAULT_CONFIG = {
     "input_file":   ROOT / "data" / "personalised_dataset.xlsx",
     "n_rows":       100,
     "missing_rate": 0.15,
     "seed":         42,
-    # Matrix Factorization hyper-parameters
     "mf_rank":      5,
     "mf_lr":        0.005,
     "mf_reg":       0.02,
@@ -139,7 +121,7 @@ def main():
     rmse_df.to_csv(cfg["out_rmse_csv"], encoding="utf-8-sig")
     print(f"    → RMSE CSV: {cfg['out_rmse_csv']}")
 
-    # Lưu RMSE ra TXT (dễ đọc, dễ copy vào báo cáo)
+    # Lưu RMSE ra TXT 
     with open(cfg["out_rmse_txt"], "w", encoding="utf-8") as f:
         f.write("=" * 48 + "\n")
         f.write("  Matrix Factorization — RMSE kết quả\n")

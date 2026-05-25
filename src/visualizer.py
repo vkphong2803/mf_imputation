@@ -1,20 +1,10 @@
-"""
-Matrix Factorization — Visualization
-Tạo 1 biểu đồ RMSE bar chart duy nhất — gọn, dễ đọc.
-"""
-
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-
 def plot_rmse(rmse_df: pd.DataFrame,
               overall_norm: float,
               out_path: str) -> None:
-    """
-    Vẽ horizontal bar chart RMSE từng cột.
-    Đơn giản, 1 ảnh duy nhất, dễ nhúng vào báo cáo.
-    """
     colors = plt.cm.tab10(np.linspace(0, 1, len(rmse_df)))
 
     fig, ax = plt.subplots(figsize=(9, 5))

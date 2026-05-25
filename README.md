@@ -1,6 +1,6 @@
 # Matrix Factorization — Missing Data Imputation
 
-Bài thực hành **khoa học dữ liệu y tế công cộng**: điền giá trị thiếu bằng phương pháp **Matrix Factorization (SGD)** trên bộ dữ liệu `personalised_dataset.xlsx`.
+PT2: điền giá trị thiếu bằng phương pháp **Matrix Factorization (SGD)** trên bộ dữ liệu `personalised_dataset.xlsx`.
 
 ---
 
